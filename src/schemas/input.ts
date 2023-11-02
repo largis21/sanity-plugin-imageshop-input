@@ -1,4 +1,4 @@
-import {ObjectDefinition, defineField, defineType} from 'sanity'
+import {ObjectDefinition, ObjectOptions, defineField, defineType} from 'sanity'
 import {ImageshopInputComponent} from '../components/input/ImageshopInputComponent'
 import {ExternalIframeParams} from '../utils'
 
@@ -13,7 +13,7 @@ export type ImageshopInputOptions = {
  */
 export type ImageshopDefinition = Omit<ObjectDefinition, 'type' | 'fields' | 'options'> & {
   type: typeof imageshopTypeName
-  options?: ImageshopInputOptions
+  options?: ImageshopInputOptions & ObjectOptions
 }
 
 declare module '@sanity/types' {
