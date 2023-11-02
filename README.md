@@ -2,6 +2,10 @@
 
 > This is a **Sanity Studio v3** plugin.
 
+## Description
+This is a minimal plugin for integrating imageshop with Sanity. The plugin uses the Imageshop imagepicker iframe and is based on [This plugin](https://github.com/screentek/Sanity)
+The difference between the two plugins is that Screentek's plugin actually makes a sanity image asset, while this only saves the permalink as well as some metadata.
+
 ## Installation
 
 ```sh
@@ -14,11 +18,11 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-imageshop-input'
+import {imageshopInput} from 'sanity-plugin-imageshop-input'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [imageshopInput()],
 })
 ```
 
