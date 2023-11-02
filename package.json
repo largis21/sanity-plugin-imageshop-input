@@ -6,16 +6,16 @@
     "sanity",
     "sanity-plugin"
   ],
-  "homepage": "https://github.com/twoday-avento/sanity-plugin-imageshop-input#readme",
+  "homepage": "https://github.com/largis21/sanity-plugin-imageshop-input#readme",
   "bugs": {
-    "url": "https://github.com/twoday-avento/sanity-plugin-imageshop-input/issues"
+    "url": "https://github.com/largis21/sanity-plugin-imageshop-input/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/twoday-avento/sanity-plugin-imageshop-input.git"
+    "url": "git+ssh://git@github.com/largis21/sanity-plugin-imageshop-input.git"
   },
   "license": "MIT",
-  "author": "twoday <lars-ivar.giskegjerde@twoday.com>",
+  "author": "Lars-Ivar Giskegjerde <ligiskegjerde@gmail.com>",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

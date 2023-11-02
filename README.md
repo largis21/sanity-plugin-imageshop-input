@@ -24,7 +24,7 @@ export default defineConfig({
 
 ## License
 
-[MIT](LICENSE) © twoday
+[MIT](LICENSE) © Lars-Ivar Giskegjerde
 
 ## Develop & test
 
