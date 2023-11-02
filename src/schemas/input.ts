@@ -22,6 +22,12 @@ declare module '@sanity/types' {
   }
 }
 
+declare module 'sanity' {
+  export interface IntrinsicDefinitions {
+    imageshop: ImageshopDefinition
+  }
+}
+
 export const input = defineType({
   name: imageshopTypeName,
   title: 'Imageshop',
