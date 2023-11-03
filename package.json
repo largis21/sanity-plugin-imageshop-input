@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-imageshop-input",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "keywords": [
     "sanity",
@@ -47,8 +47,7 @@
   },
   "dependencies": {
     "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/studio-secrets": "^2.0.2",
-    "np": "^8.0.4"
+    "@sanity/studio-secrets": "^2.0.2"
   },
   "devDependencies": {
     "@sanity/pkg-utils": "^3.2.2",
