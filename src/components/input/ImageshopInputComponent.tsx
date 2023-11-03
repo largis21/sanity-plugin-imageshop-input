@@ -7,20 +7,6 @@ import {ImagePreview} from './ImagePreview'
 import {ImageLoading} from './ImageLoading'
 import {ReplaceOrDeleteButton} from './ReplaceOrDeleteButton'
 
-export type ImageshopInputValue = {
-  type: 'imageshop'
-  permalink: string
-  metadata: {
-    alt: string
-    documentId: number
-    dimensions: {
-      width: number
-      height: number
-      aspectRatio: number
-    }
-  }
-}
-
 export function ImageshopInputComponent(props: ObjectInputProps) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)

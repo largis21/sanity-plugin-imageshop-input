@@ -1,5 +1,5 @@
 import {ImageshopDocument} from '../../components/hooks/useOnDocumentSelected'
-import {ImageshopInputValue} from '../../components/input/ImageshopInputComponent'
+import {ImageshopInputValue} from '../../schemas/input'
 
 export async function mapDocumentToSchema(
   document: ImageshopDocument,
