@@ -1,6 +1,6 @@
 import {SettingsView} from '@sanity/studio-secrets'
 
-export const namespace = 'imagesoftPlugin'
+export const namespace = 'imageshopPlugin'
 
 const pluginConfigKeys = [
   {
