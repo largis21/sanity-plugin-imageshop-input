@@ -1,5 +1,5 @@
 import {ObjectInputProps, unset} from 'sanity'
-import {Stack, ThemeProvider, Button} from '@sanity/ui'
+import {Stack, Button} from '@sanity/ui'
 import {ImagePicker} from '../views/ImagePicker'
 import {useState} from 'react'
 import {AddIcon} from '@sanity/icons'
@@ -38,7 +38,7 @@ export function ImageshopInputComponent(props: ObjectInputProps) {
   }
 
   return (
-    <ThemeProvider>
+    <>
       {open && <ImagePicker {...props} onClose={handleInputClose} setLoading={setLoading} />}
       {loading ? (
         <ImageLoading />
@@ -58,6 +58,6 @@ export function ImageshopInputComponent(props: ObjectInputProps) {
           )}
         </>
       )}
-    </ThemeProvider>
+    </>
   )
 }

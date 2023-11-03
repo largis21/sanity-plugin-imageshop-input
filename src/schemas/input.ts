@@ -1,6 +1,7 @@
 import {ObjectDefinition, ObjectOptions, defineField, defineType} from 'sanity'
 import {ImageshopInputComponent} from '../components/input/ImageshopInputComponent'
 import {ExternalIframeParams} from '../utils'
+import { ImageshopInputField } from '../components/fields/ImageshopInputField'
 
 const imageshopTypeName = 'imageshop' as const
 
@@ -33,7 +34,7 @@ export const input = defineType({
   title: 'Imageshop',
   type: 'object',
   components: {
-    input: ImageshopInputComponent,
+    field: ImageshopInputField
   },
   fields: [
     defineField({
