@@ -5,7 +5,7 @@ import {ImageshopInputField} from '../components/fields/ImageshopInputField'
 const imageshopTypeName = 'imageshop' as const
 
 export type ImageshopInputValue = {
-  type: 'imageshop'
+  _type: 'imageshop'
   permalink: string
   metadata: {
     alt: string

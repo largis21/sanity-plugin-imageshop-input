@@ -19,7 +19,7 @@ export async function mapDocumentToSchema(
 
   try {
     return {
-      type: 'imageshop',
+      _type: 'imageshop',
       permalink,
       metadata: {
         alt: 'no alt', // TODO
