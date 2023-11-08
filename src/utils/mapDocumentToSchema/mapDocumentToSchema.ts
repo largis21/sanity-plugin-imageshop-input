@@ -22,7 +22,7 @@ export async function mapDocumentToSchema(
       _type: 'imageshop',
       permalink,
       metadata: {
-        alt: 'no alt', // TODO
+        alt: '',
         documentId: document.documentId,
         dimensions: {
           width: image.width,
