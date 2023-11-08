@@ -2,6 +2,9 @@ import {ThemeProvider, Stack, Text} from '@sanity/ui'
 import {ObjectFieldProps} from 'sanity'
 import {ImageshopInputComponent} from '../input/ImageshopInputComponent'
 
+/**
+ * Not in use for now
+ */
 export function ImageshopInputField(props: ObjectFieldProps) {
   const inputProps = props.inputProps
 
