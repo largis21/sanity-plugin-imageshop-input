@@ -35,6 +35,13 @@ export function ImagePicker(
     props.onClose()
     props.setLoading(true)
 
+    /*
+     * ISSUE #1
+     *
+     * This function is what makes the image loading so slow;
+     * It first has to wait for Imageshop to generate the image before it can load it
+     * and get the image dimensions
+     */
     const mappedDocument = await mapDocumentToSchema(doc)
     if (!mappedDocument) return
 
