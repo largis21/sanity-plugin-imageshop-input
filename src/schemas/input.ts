@@ -19,7 +19,13 @@ export type ImageshopInputValue = {
 }
 
 export type ImageshopInputOptions = {
+  /**
+   * Options for changing the imageshop imagepicker parameters
+   */
   iFrameParams?: ExternalIframeParams
+  /*
+   * Disable/Enable the alt input field, default is true
+   */
   showAlt?: boolean
 }
 
