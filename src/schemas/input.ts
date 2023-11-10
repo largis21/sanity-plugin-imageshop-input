@@ -1,7 +1,6 @@
 import {ObjectDefinition, ObjectOptions, defineField, defineType} from 'sanity'
 import {ExternalIframeParams} from '../utils'
-import {ImageshopInputField} from '../components/fields/ImageshopInputField'
-import { ImageshopInputComponent } from '../components/input/ImageshopInputComponent'
+import {ImageshopInputComponent} from '../components/input/ImageshopInputComponent'
 
 const imageshopTypeName = 'imageshop' as const
 
@@ -21,6 +20,7 @@ export type ImageshopInputValue = {
 
 export type ImageshopInputOptions = {
   iFrameParams?: ExternalIframeParams
+  showAlt?: boolean
 }
 
 /**

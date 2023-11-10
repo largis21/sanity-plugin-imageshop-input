@@ -24,15 +24,18 @@ export function ImageshopInputComponent(props: ObjectInputProps) {
     props.onChange(unset())
   }
 
-  const onAltChange = useCallback((event: FormEvent<HTMLInputElement>) => {
-    const newAltText = event.currentTarget.value
-    setAltText(newAltText)
+  const onAltChange = useCallback(
+    (event: FormEvent<HTMLInputElement>) => {
+      const newAltText = event.currentTarget.value
+      setAltText(newAltText)
 
-    const newValue = {...props.value}
-    newValue.metadata.alt = newAltText
+      const newValue = {...props.value}
+      newValue.metadata.alt = newAltText
 
-    props.onChange(set(newValue))
-  }, [props])
+      props.onChange(set(newValue))
+    },
+    [props],
+  )
 
   return (
     <ThemeProvider>
@@ -51,15 +54,17 @@ export function ImageshopInputComponent(props: ObjectInputProps) {
                 <span>Could not preview selected image</span>
               )}
 
-              <Stack space={2} marginTop={2}>
-                <Text size={1} weight="bold">
-                  Alternative text
-                </Text>
-                <Text size={1} muted>
-                  Important for SEO and accessibility
-                </Text>
-                <TextInput onChange={onAltChange} value={altText} />
-              </Stack>
+              {props.schemaType.options.showAlt !== false && (
+                <Stack space={2} marginTop={2}>
+                  <Text size={1} weight="bold">
+                    Alternative text
+                  </Text>
+                  <Text size={1} muted>
+                    Important for SEO and accessibility
+                  </Text>
+                  <TextInput onChange={onAltChange} value={altText} />
+                </Stack>
+              )}
             </Stack>
           ) : (
             <Button icon={AddIcon} text={'Add image'} mode="ghost" onClick={handleInputOpen} />
