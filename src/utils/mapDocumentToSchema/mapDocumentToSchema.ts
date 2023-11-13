@@ -21,8 +21,9 @@ export async function mapDocumentToSchema(
     return {
       _type: 'imageshop',
       permalink,
+      alt: '',
+      caption: '',
       metadata: {
-        alt: '',
         documentId: document.documentId,
         dimensions: {
           width: image.width,

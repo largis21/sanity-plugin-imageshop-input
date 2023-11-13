@@ -7,8 +7,9 @@ const imageshopTypeName = 'imageshop' as const
 export type ImageshopInputValue = {
   _type: 'imageshop'
   permalink: string
+  alt: string
+  caption: string
   metadata: {
-    alt: string
     documentId: number
     dimensions: {
       width: number
@@ -27,6 +28,10 @@ export type ImageshopInputOptions = {
    * Disable/Enable the alt input field, default is true
    */
   showAlt?: boolean
+  /**
+   * Disable/Enable the caption input field, default is false
+   */
+  showCaption?: boolean
 }
 
 /**
@@ -62,13 +67,17 @@ export const input = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'alt',
+      type: 'string',
+    }),
+    defineField({
+      name: 'caption',
+      type: 'string',
+    }),
+    defineField({
       name: 'metadata',
       type: 'object',
       fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-        }),
         defineField({
           name: 'documentId',
           type: 'number',
