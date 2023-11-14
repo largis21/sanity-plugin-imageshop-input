@@ -11,6 +11,7 @@ export type ImageshopInputValue = {
   caption: string
   metadata: {
     documentId: number
+    lqip: string
     dimensions: {
       width: number
       height: number
