@@ -17,7 +17,6 @@ export function ImageshopView({
   const iFrameUrl = useMemo(() => {
     const defaultIframeSettings: ExternalIframeParams = {
       imageshopSizes: '2048x0',
-      allowCrop: true,
       ...iFrameSettings,
     }
 

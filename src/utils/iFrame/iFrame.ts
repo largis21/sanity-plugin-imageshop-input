@@ -1,7 +1,6 @@
 type Booleanish = 'true' | 'false'
 
 export type ExternalIframeParams = {
-  allowCrop?: boolean
   /**
    * The imageshop size picker is a bit weird, it will scale your image up to your size,
    * no matter how much it is cropped, this also applies to the inverse, if your imageshopSizes
@@ -34,8 +33,8 @@ function getIframeParams(params: ExternalIframeParams, apiKey: string): IframePa
   return {
     IFRAMEINSERT: 'true',
     HIDEIMAGEINFO: 'false',
-    INSERTIMIDIATELY: params.allowCrop ? 'false' : 'true',
-    SHOWSIZEDIALOGUE: 'false',
+    INSERTIMIDIATELY: 'false',
+    SHOWSIZEDIALOGUE: 'true',
     SHOWCROPDIALOGUE: 'true',
     FREECROP: 'false',
     IMAGESHOPINTERFACENAME: '',
@@ -44,7 +43,7 @@ function getIframeParams(params: ExternalIframeParams, apiKey: string): IframePa
     PROFILEID: '0', // hack to ignore the default imageshop profile
     REQUIREDUPLOADFIELDS: '',
     UPLOADFIELDLANGUAGES: 'no,en',
-    IMAGESHOPSIZES: `0x0;${params.imageshopSizes}`, //0x0 is a hack to enforce the aspect ratio
+    IMAGESHOPSIZES: `0x0;${params.imageshopSizes}`,
     FORMAT: 'json',
     IMAGESHOPTOKEN: apiKey,
   }
