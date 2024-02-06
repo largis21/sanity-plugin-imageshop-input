@@ -65,7 +65,7 @@ export function ImageshopInputComponent(props: ObjectInputProps) {
               <ReplaceOrDeleteButton onReplace={handleInputOpen} onDelete={handleImageDelete} />
 
               {props.value.permalink ? (
-                <ImagePreview src={props.value.permalink} />
+                <ImagePreview src={props.value.metadata?.lqip || props.value.permalink} />
               ) : (
                 <span>Could not preview selected image</span>
               )}
